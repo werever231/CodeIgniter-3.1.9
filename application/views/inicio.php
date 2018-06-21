@@ -88,7 +88,7 @@
 				</header>
 				<ul class="actions">
 					<li><a href="#" class="button special icon fa-download">Download</a></li>
-					<li><a href="#" class="button">Learn More</a></li>
+					<li><a href="<?php echo base_url(); ?>Contacto" class="button">Contacto</a></li>
 				</ul>
 			</section>
 

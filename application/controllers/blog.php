@@ -5,6 +5,10 @@ class Blog extends CI_Controller {
 		$this->load->view('inicio');
 	}
 
+	function Contacto(){
+		$this->load->helper('url');
+		$this->load->view('Contacto');
+	}
 
 }
 ?>
