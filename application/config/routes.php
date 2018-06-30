@@ -53,5 +53,6 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['Contacto']='blog/Contacto';
 $route['Inicio']='blog/index';
+$route['Contacto']='blog/Contacto';
+$route['AgregaComentario']='Comentario/Agregar';
