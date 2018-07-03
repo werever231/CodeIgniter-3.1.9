@@ -2,8 +2,8 @@
     RewriteEngine On 
     RewriteCond %{REQUEST_FILENAME} !-f 
     RewriteCond %{REQUEST_FILENAME} !-d 
-    RewriteRule ^(.*)$ /CodeIgniter-3.1.9/index.php/$1 [L] 
+    RewriteRule ^(.*)$ /tradingWeb/index.php/$1 [L] 
 </IfModule>
 <IfModule !mod_rewrite.c>
-    ErrorDocument 404 /CodeIgniter-3.1.9/index.php 
+    ErrorDocument 404 /tradingWeb/index.php 
 </IfModule>

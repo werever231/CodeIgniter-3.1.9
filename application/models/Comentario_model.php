@@ -15,5 +15,11 @@ class Comentario_model extends CI_Model{
 			);
 		//Aqui se guardan los datos en la tabla, usando el modelo para hacerlo.
 		$this->db->insert('comentarios',$datos);
+                
+                /*
+                 * usa $this->db->insert_id() para recuperar el id que se guardo
+                 * Si es -1, entonces hubo un error
+                 */
+                return $this->db->insert_id();
 	}
 }
