@@ -56,3 +56,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['Inicio']='blog/index';
 $route['Contacto']='blog/Contacto';
 $route['AgregaComentario']='Comentario/Agregar';
+$route['VerComentario']='Comentario/index';

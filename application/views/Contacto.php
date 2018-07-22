@@ -28,8 +28,7 @@
 					</ul>
 				</div>
 				<div class="formulario_contacto">
-					<form method="post" action="<?php echo base_url(); ?>AgregaComentario">
-						<font color="red" style="font-weight: bold; font-size: 14px; text-decoration: underline" <?php echo validation_errors(); ?>></font>
+					<form method="GET" action="AgregaComentario/">						
 						<table>
 							<tr>
 								<td colspan="2"><labe>Queremos saber tu opinión.</label></td>
@@ -43,15 +42,18 @@
 								<td><input type="text" name="correo"></td>	
 							</tr>
 							<tr>
-								<td><label>Comentario:</label></td><td><textarea placeholder="Ayudanos a mejorar" name="comentario"></textarea></td>
+								<td><label>Comentario:</label></td>
+								<td><textarea name="comentario"  placeholder="Comentario"></textarea></td>
 							</tr>
 
 							<tr>
-								<td colspan="2" align="center"><input type="submit" name="Enviar"></td>
+								<td colspan="2" align="center"><input type="submit" value="Enviar"></td>							
 							</tr>
 						</table>
 					</form>
-
+					<form method="POST" action="VerComentario">
+						<td align="center"><input type="submit" value="Comentarios"></td>
+					</form>
 				</div>
 			</header>
 
