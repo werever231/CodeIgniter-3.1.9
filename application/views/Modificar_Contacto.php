@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Trading Games/Contacto</title>
+		<title>Modificar Contacto</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -19,41 +19,39 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="content">
-				<div class="maquina">
-						<img src="<?php echo base_url(); ?>images/Voceto_1.jpg" width="500px" height="420px" alt="" />
-
-					</div>
+				
 					<ul class="actions">
 						<li><a href="<?php echo base_url(); ?>Inicio" class="button special icon fa-download">Volver al inicio</a></li>						
 					</ul>
 				</div>
 				<div class="formulario_contacto">
-					<form method="GET" action="AgregaComentario/">						
+					<form method="POST" action="ActualizarComentario/<?=$id;?>">						
 						<table>
 							<tr>
-								<td colspan="2"><label>Queremos saber tu opinión.</label></td>
+								<td colspan="2"><label>Modificar Comentario</label></td>
 							</tr>
-							<tr>
+							<?php
+							//Jalas los datos del arreglo usando la sentencia mencionada $nombre_posicion->result[pos]->Atributo.
+							echo "<tr>
 								<td><label>Nombre:</label></td>
-								<td><input type="text" name="nombre"></td>								
+								<td><input type='text' name='nombre' value= '".$comentario->result()[0]->Nombre."' disabled></td>								
 							</tr>
 							<tr>
 								<td><label>Correo:</label></td>
-								<td><input type="text" name="correo"></td>	
+								<td><input type='text' name='correo' value='".$comentario->result()[0]->Correo."' disabled ></td>	
 							</tr>
 							<tr>
 								<td><label>Comentario:</label></td>
-								<td><textarea name="comentario"  placeholder="Comentario"></textarea></td>
-							</tr>
+								<td><textarea name='comentario'></textarea></td>
+							</tr>";
+							?>
 
 							<tr>
 								<td colspan="2" align="center"><input type="submit" value="Enviar"></td>							
 							</tr>
 						</table>
 					</form>
-					<form method="POST" action="VerComentario">
-						<td align="center"><input type="submit" value="Comentarios"></td>
-					</form>
+					
 				</div>
 			</header>
 

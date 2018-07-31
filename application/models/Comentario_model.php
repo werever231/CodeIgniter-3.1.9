@@ -23,9 +23,34 @@ class Comentario_model extends CI_Model{
                 //return $this->db->insert_id();
 	}
 
-	function ver_comentario()
+	function ver_comentarios()
 	{
+		//Con esta consulta, obtienes todos los datos de la tabla
 		$consulta=$this->db->get('comentarios');
 		return $consulta;
+	}
+
+	function comentario_id($id)//Metodo para obtener comemntario por id
+	{
+		$consulta=$this->db->select('*');
+		$consulta=$this->db->where('ID_Coment', $id);
+		$consulta=$this->db->get('comentarios');
+		return $consulta;
+
+	}
+
+	function eliminar($id)//Metodo para eliminar desde la bd;
+	{
+		$consulta=$this->db->where('ID_Coment', $id);
+		$consulta= $this->db->delete('comentarios');
+		return $consulta;
+	}
+
+	//Consulta para poder actualizar el comentario 
+	function modificar_comentario($id, $comentario)
+	{
+		$this->db->where('ID_Coment', $id);
+    	$this->db->set('Coment', $comentario);
+    	return $this->db->update('comentarios');
 	}
 }

@@ -27,8 +27,8 @@
 							<td><label>Nombre</label></td>
 							<td><label>Correo</label></td>
 							<td><label>Comentario</label></td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td>&nbps;</td>
+							<td>&nbps;</td>
 						</tr>
 
 						<?php
@@ -37,9 +37,10 @@
 								echo"<tr>
 									<td><label>" .$fila->Nombre. "</label></td>
 									<td><label>" .$fila->Correo. "</label></td>
-									<td><label>" .$fila->Coment. "</label></td>
-									<td><a href=''class='button special icon fa-download'>Modificar</a></li></td>
-									<td><a href=''class='button special icon fa-download'>Eliminar</a></li></td>
+									<td><label>" .$fila->Coment."</label></td>
+																		
+									<td><a href='Modificar?id=".$fila->ID_Coment."' class='button special icon fa-download'>Modificar</a></li></td>
+									<td><a href='Eliminar?id=".$fila->ID_Coment."'class='button special icon fa-download'>Eliminar</a></li></td>
 								</tr>";		
 							}	
 						?>

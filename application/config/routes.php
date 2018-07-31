@@ -53,7 +53,10 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['Inicio']='blog/index';
-$route['Contacto']='blog/Contacto';
-$route['AgregaComentario']='Comentario/Agregar';
-$route['VerComentario']='Comentario/index';
+$route['Inicio']='blog/index';//Pantalla principal
+$route['Contacto']='blog/Contacto';//Vista de contacto
+$route['AgregaComentario']='Comentario/Agregar';//Ruta para agregar comentario
+$route['VerComentario']='Comentario/index';//Ruta para ver comentarios
+$route['Modificar']='Comentario/Modificar';//Vista de actualizar comentario
+$route['ActualizarComentario/(:num)']='Comentario/actualizar_comentario/$1';//Ruta para atualizar comentario
+$route['Eliminar']='Comentario/Eliminar';//Ruta para eliminar comentario
